@@ -21,9 +21,10 @@ steps:
     projects: $(SolutionPath)
 
 - task: DotNetCoreCLI@2
+  displayName: 'Testing web project'
   inputs:
     command: 'test'
-    projects: '**/Tests*/*.csproj'
+    projects: 'src/Tests*/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
