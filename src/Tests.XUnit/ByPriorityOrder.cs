@@ -16,9 +16,9 @@ namespace XUnit.Project
         {
             Test3Called = true;
 
-            Assert.False(Test1Called);
-            Assert.False(Test2ACalled);
-            Assert.False(Test2BCalled);
+            Assert.True(Test1Called);
+            Assert.True(Test2ACalled);
+            Assert.True(Test2BCalled);
         }
 
         [Fact, TestPriority(0)]
@@ -26,8 +26,8 @@ namespace XUnit.Project
         {
             Test2BCalled = true;
 
-            Assert.False(Test1Called);
-            Assert.False(Test2ACalled);
+            Assert.True(Test1Called);
+            Assert.True(Test2ACalled);
             Assert.False(Test3Called);
         }
 
@@ -36,7 +36,7 @@ namespace XUnit.Project
         {
             Test2ACalled = true;
 
-            Assert.False(Test1Called);
+            Assert.True(Test1Called);
             Assert.False(Test2BCalled);
             Assert.False(Test3Called);
         }

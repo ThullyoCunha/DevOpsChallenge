@@ -14,9 +14,9 @@ namespace NUnit.Project
         {
             Test3Called = true;
 
-            Assert.IsFalse(Test1Called);
+            Assert.IsTrue(Test1Called);
             Assert.IsFalse(Test2ACalled);
-            Assert.IsFalse(Test2BCalled);
+            Assert.IsTrue(Test2BCalled);
         }
 
         [Test, Order(0)]
@@ -24,7 +24,7 @@ namespace NUnit.Project
         {
             Test2BCalled = true;
 
-            Assert.IsFalse(Test1Called);
+            Assert.IsTrue(Test1Called);
             Assert.IsFalse(Test2ACalled);
             Assert.IsFalse(Test3Called);
         }
@@ -34,9 +34,9 @@ namespace NUnit.Project
         {
             Test2ACalled = true;
 
-            Assert.IsFalse(Test1Called);
-            Assert.IsFalse(Test2BCalled);
-            Assert.IsFalse(Test3Called);
+            Assert.IsTrue(Test1Called);
+            Assert.IsTrue(Test2BCalled);
+            Assert.IsTrue(Test3Called);
         }
 
         [Test, Order(-5)]

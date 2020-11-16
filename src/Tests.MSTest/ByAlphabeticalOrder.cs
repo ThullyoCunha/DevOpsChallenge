@@ -23,17 +23,16 @@ namespace MSTest.Project
         {
             Test2Called = true;
 
-            Assert.IsFalse(Test1Called);
+            Assert.IsTrue(Test1Called);
             Assert.IsFalse(Test3Called);
         }
         [TestMethod]
-
         public void Test3()
         {
             Test3Called = true;
 
-            Assert.IsFalse(Test1Called);
-            Assert.IsFalse(Test2Called);
+            Assert.IsTrue(Test1Called);
+            Assert.IsTrue(Test2Called);
         }
     }
 }
