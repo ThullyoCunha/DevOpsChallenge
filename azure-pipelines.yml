@@ -12,7 +12,7 @@ pool:
 variables:
   BuildConfiguration: 'Release'
   SolutionPath: '**/*.sln'
-
+  
 steps:
 - task: DotNetCoreCLI@2
   displayName: 'Build web project'
